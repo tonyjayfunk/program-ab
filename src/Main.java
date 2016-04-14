@@ -29,17 +29,16 @@ public class Main {
 
     public static void main (String[] args) {
 
-
-
         MagicStrings.setRootPath();
 
         AIMLProcessor.extension =  new PCAIMLProcessorExtension();
         mainFunction(args);
     }
+    
     public static void mainFunction (String[] args) {
-        String botName = "alice2";
+        String botName = "skott";
         MagicBooleans.jp_tokenize = false;
-        MagicBooleans.trace_mode = true;
+        MagicBooleans.trace_mode = false;
         String action="chat";
         System.out.println(MagicStrings.program_name_version);
         for (String s : args) {
@@ -195,7 +194,7 @@ public class Main {
                 System.out.println("Human: " + strLine);
 
                 String response = chatSession.multisentenceRespond(strLine);
-                System.out.println("Robot: " + response);
+                System.out.println("Skott: " + response);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
